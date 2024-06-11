@@ -1,0 +1,16 @@
+{
+	"name": "onsidelondon",
+	"module": "index.ts",
+	"type": "module",
+	"scripts": {
+		"css": "tailwindcss --watch -i src/main.css -o src/assets/main.css",
+		"dev": "statik src"
+	},
+	"devDependencies": {
+		"@types/bun": "latest"
+	},
+	"dependencies": {
+		"@tailwindcss/cli": "^4.0.0-alpha.16",
+		"tailwindcss": "^4.0.0-alpha.16"
+	}
+}
