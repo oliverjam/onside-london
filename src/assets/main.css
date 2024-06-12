@@ -543,12 +543,24 @@
   }
 }
 @layer utilities {
+  .col-span-full {
+    grid-column: 1 / -1;
+  }
+  .row-span-full {
+    grid-row: 1 / -1;
+  }
   .my-36 {
     margin-top: var(--spacing-36, 9rem);
     margin-bottom: var(--spacing-36, 9rem);
   }
   .mt-4 {
     margin-top: var(--spacing-4, 1rem);
+  }
+  .mt-12 {
+    margin-top: var(--spacing-12, 3rem);
+  }
+  .mt-48 {
+    margin-top: var(--spacing-48, 12rem);
   }
   .mx-auto {
     margin-left: auto;
@@ -563,6 +575,9 @@
   .grid {
     display: grid;
   }
+  .hidden {
+    display: none;
+  }
   .h-\[660px\] {
     height: 660px;
   }
@@ -575,8 +590,26 @@
   .max-w-2xl {
     max-width: var(--width-2xl, 42rem);
   }
+  .max-w-\[500px\] {
+    max-width: 500px;
+  }
+  .max-w-max {
+    max-width: max-content;
+  }
+  .snap-center {
+    scroll-snap-align: center;
+  }
+  .list-disc {
+    list-style-type: disc;
+  }
+  .grid-cols-1 {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
   .grid-cols-2 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .grid-rows-1 {
+    grid-template-rows: repeat(1, minmax(0, 1fr));
   }
   .flex-col {
     flex-direction: column;
@@ -593,10 +626,19 @@
   .gap-4 {
     gap: var(--spacing-4, 1rem);
   }
+  .gap-12 {
+    gap: var(--spacing-12, 3rem);
+  }
   .space-y-4 {
     :where(& > :not(:last-child)) {
       margin-top: calc(var(--spacing-4, 1rem) * var(--tw-space-y-reverse));
       margin-bottom: calc(var(--spacing-4, 1rem) * calc(1 - var(--tw-space-y-reverse)));
+    }
+  }
+  .space-y-6 {
+    :where(& > :not(:last-child)) {
+      margin-top: calc(var(--spacing-6, 1.5rem) * var(--tw-space-y-reverse));
+      margin-bottom: calc(var(--spacing-6, 1.5rem) * calc(1 - var(--tw-space-y-reverse)));
     }
   }
   .space-y-10 {
@@ -605,8 +647,17 @@
       margin-bottom: calc(var(--spacing-10, 2.5rem) * calc(1 - var(--tw-space-y-reverse)));
     }
   }
+  .space-y-12 {
+    :where(& > :not(:last-child)) {
+      margin-top: calc(var(--spacing-12, 3rem) * var(--tw-space-y-reverse));
+      margin-bottom: calc(var(--spacing-12, 3rem) * calc(1 - var(--tw-space-y-reverse)));
+    }
+  }
   .bg-black {
     background-color: var(--color-black, #000);
+  }
+  .bg-stone-200 {
+    background-color: var(--color-stone-200, #e7e5e4);
   }
   .bg-stone-600 {
     background-color: var(--color-stone-600, #57534e);
@@ -643,6 +694,9 @@
   .pb-6 {
     padding-bottom: var(--spacing-6, 1.5rem);
   }
+  .pl-4 {
+    padding-left: var(--spacing-4, 1rem);
+  }
   .text-center {
     text-align: center;
   }
@@ -657,9 +711,17 @@
     font-size: var(--font-size-3xl, 1.875rem);
     line-height: var(--font-size-3xl--line-height, 2.25rem);
   }
+  .text-5xl {
+    font-size: var(--font-size-5xl, 3rem);
+    line-height: var(--font-size-5xl--line-height, 1);
+  }
   .text-lg {
     font-size: var(--font-size-lg, 1.125rem);
     line-height: var(--font-size-lg--line-height, 1.75rem);
+  }
+  .text-xl {
+    font-size: var(--font-size-xl, 1.25rem);
+    line-height: var(--font-size-xl--line-height, 1.75rem);
   }
   .text-\[clamp\(2rem\,2rem\+2vw\,5rem\)\] {
     font-size: clamp(2rem, 2rem + 2vw, 5rem);
@@ -670,6 +732,9 @@
   .text-stone-900 {
     color: var(--color-stone-900, #1c1917);
   }
+  .text-stone-950 {
+    color: var(--color-stone-950, #0c0a09);
+  }
   .text-white {
     color: var(--color-white, #fff);
   }
@@ -679,9 +744,49 @@
   .underline-offset-6 {
     text-underline-offset: 6px;
   }
+  .group-hover\:block {
+    &:is(:where(.group):hover *) {
+      display: block;
+    }
+  }
+  .group-hover\:hidden {
+    &:is(:where(.group):hover *) {
+      display: none;
+    }
+  }
   .placeholder\:text-stone-500 {
     &::placeholder {
       color: var(--color-stone-500, #78716c);
+    }
+  }
+  .max-lg\:snap-mandatory {
+    @media (width < 64rem) {
+      --tw-scroll-snap-strictness: mandatory;
+    }
+  }
+  .max-md\:flex {
+    @media (width < 48rem) {
+      display: flex;
+    }
+  }
+  .max-md\:snap-x {
+    @media (width < 48rem) {
+      scroll-snap-type: x var(--tw-scroll-snap-strictness);
+    }
+  }
+  .max-md\:overflow-x-auto {
+    @media (width < 48rem) {
+      overflow-x: auto;
+    }
+  }
+  .md\:sticky {
+    @media (width >= 48rem) {
+      position: sticky;
+    }
+  }
+  .md\:top-12 {
+    @media (width >= 48rem) {
+      top: var(--spacing-12, 3rem);
     }
   }
   .md\:my-48 {
@@ -693,6 +798,11 @@
   .md\:mt-6 {
     @media (width >= 48rem) {
       margin-top: var(--spacing-6, 1.5rem);
+    }
+  }
+  .md\:grid-cols-2 {
+    @media (width >= 48rem) {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
     }
   }
   .md\:flex-row {
@@ -781,6 +891,7 @@
   @layer base {
     *, ::before, ::after, ::backdrop {
       --tw-space-y-reverse: 0;
+      --tw-scroll-snap-strictness: proximity;
     }
   }
 }
@@ -814,4 +925,9 @@
   syntax: "<number>";
   inherits: false;
   initial-value: 0;
+}
+@property --tw-scroll-snap-strictness {
+  syntax: "*";
+  inherits: false;
+  initial-value: proximity;
 }
