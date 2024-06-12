@@ -773,7 +773,7 @@
     .fade-in-on-scroll {
       animation: fade-in 1ms linear;
       animation-timeline: view();
-      animation-range: entry 0% entry 100%;
+      animation-range: cover 0% cover 50%;
     }
   }
 }
