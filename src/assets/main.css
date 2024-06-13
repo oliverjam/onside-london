@@ -680,12 +680,20 @@
   .p-6 {
     padding: var(--spacing-6, 1.5rem);
   }
+  .py-2 {
+    padding-top: var(--spacing-2, 0.5rem);
+    padding-bottom: var(--spacing-2, 0.5rem);
+  }
   .py-4 {
     padding-top: var(--spacing-4, 1rem);
     padding-bottom: var(--spacing-4, 1rem);
   }
   .pt-64 {
     padding-top: var(--spacing-64, 16rem);
+  }
+  .px-3 {
+    padding-left: var(--spacing-3, 0.75rem);
+    padding-right: var(--spacing-3, 0.75rem);
   }
   .px-6 {
     padding-left: var(--spacing-6, 1.5rem);
@@ -719,6 +727,10 @@
     font-size: var(--font-size-lg, 1.125rem);
     line-height: var(--font-size-lg--line-height, 1.75rem);
   }
+  .text-sm {
+    font-size: var(--font-size-sm, 0.875rem);
+    line-height: var(--font-size-sm--line-height, 1.25rem);
+  }
   .text-xl {
     font-size: var(--font-size-xl, 1.25rem);
     line-height: var(--font-size-xl--line-height, 1.75rem);
@@ -728,6 +740,9 @@
   }
   .uppercase {
     text-transform: uppercase;
+  }
+  .leading-tight {
+    line-height: var(--line-height-tight, 1.25);
   }
   .text-stone-900 {
     color: var(--color-stone-900, #1c1917);
@@ -835,6 +850,18 @@
       padding: var(--spacing-12, 3rem);
     }
   }
+  .md\:py-4 {
+    @media (width >= 48rem) {
+      padding-top: var(--spacing-4, 1rem);
+      padding-bottom: var(--spacing-4, 1rem);
+    }
+  }
+  .md\:px-6 {
+    @media (width >= 48rem) {
+      padding-left: var(--spacing-6, 1.5rem);
+      padding-right: var(--spacing-6, 1.5rem);
+    }
+  }
   .md\:px-9 {
     @media (width >= 48rem) {
       padding-left: var(--spacing-9, 2.25rem);
@@ -845,6 +872,12 @@
     @media (width >= 48rem) {
       font-size: var(--font-size-2xl, 1.5rem);
       line-height: var(--font-size-2xl--line-height, 2rem);
+    }
+  }
+  .md\:text-base {
+    @media (width >= 48rem) {
+      font-size: var(--font-size-base, 1rem);
+      line-height: var(--font-size-base--line-height, 1.5rem);
     }
   }
   .lg\:my-48 {
