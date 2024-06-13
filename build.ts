@@ -1,42 +1,38 @@
-import { readdir, rmdir, mkdir } from "node:fs/promises";
+import { readdir } from "node:fs/promises";
 import { join } from "node:path";
 
-type PageModule = { default: () => string };
+try {
+	let config = {
+		indir: join("src", "pages"),
+		outdir: "_site",
+		assetdir: join("src", "assets"),
+	};
 
-let config = {
-	indir: join("src", "pages"),
-	outdir: "_site",
-	assetdir: join("src", "assets"),
-};
+	await Bun.$`rm -rf ${config.outdir}`;
+	await Bun.$`mkdir -p ${config.outdir}`;
 
-await rmdir(config.outdir, { recursive: true });
-await mkdir(config.outdir, { recursive: true });
+	let files = await readdir(config.indir, {
+		recursive: true,
+		withFileTypes: true,
+	});
 
-for (let f of await files(config.indir)) {
-	if (!f.name.includes(".tsx")) continue;
-	let p = join(import.meta.dir, f.path, f.name);
-	let { default: fn } = (await import(p)) as PageModule;
-	let html = fn();
-	let outpath = join(
-		f.path.replace(config.indir, config.outdir),
-		f.name.replace(".tsx", ".html")
-	);
-	let file = Bun.file(outpath);
-	Bun.write(file, html);
-}
+	for (let f of files) {
+		if (!f.isFile()) continue;
+		if (!f.name.includes(".tsx")) continue;
+		let p = join(import.meta.dir, f.path, f.name);
+		let { default: fn } = await import(p);
+		let html = fn();
+		let outpath = join(
+			f.path.replace(config.indir, config.outdir),
+			f.name.replace(".tsx", ".html")
+		);
+		await Bun.write(outpath, html);
+	}
 
-for (let f of await files(config.assetdir)) {
-	let p = join(f.path, f.name);
-	let file = Bun.file(p);
-	let outpath = join(
-		f.path.replace(config.assetdir, config.outdir),
-		"assets",
-		f.name
-	);
-	await Bun.write(outpath, file);
-}
+	await Bun.$`cp -r ${config.assetdir} ${join(config.outdir, "assets")}`;
 
-async function files(dir: string) {
-	let fs = await readdir(dir, { recursive: true, withFileTypes: true });
-	return fs.filter((f) => f.isFile());
+	console.log("⚡ Site built");
+} catch (e) {
+	console.error(e);
+	process.exit(1);
 }
