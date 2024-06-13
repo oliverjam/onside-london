@@ -760,6 +760,9 @@
     font-size: var(--font-size-xl, 1.25rem);
     line-height: var(--font-size-xl--line-height, 1.75rem);
   }
+  .text-\[clamp\(1rem\,1rem\+2vw\,5rem\)\] {
+    font-size: clamp(1rem, 1rem + 2vw, 5rem);
+  }
   .text-\[clamp\(2rem\,2rem\+2vw\,5rem\)\] {
     font-size: clamp(2rem, 2rem + 2vw, 5rem);
   }
