@@ -543,9 +543,6 @@
   }
 }
 @layer utilities {
-  .visible {
-    visibility: visible;
-  }
   .sr-only {
     position: absolute;
     width: 1px;
@@ -562,10 +559,6 @@
   }
   .row-span-full {
     grid-row: 1 / -1;
-  }
-  .my-24 {
-    margin-top: var(--spacing-24, 6rem);
-    margin-bottom: var(--spacing-24, 6rem);
   }
   .my-36 {
     margin-top: var(--spacing-36, 9rem);
@@ -599,6 +592,9 @@
   }
   .hidden {
     display: none;
+  }
+  .table {
+    display: table;
   }
   .h-\[660px\] {
     height: 660px;
@@ -790,6 +786,9 @@
   .underline-offset-6 {
     text-underline-offset: 6px;
   }
+  .filter {
+    filter: var(--tw-blur,) var(--tw-brightness,) var(--tw-contrast,) var(--tw-grayscale,) var(--tw-hue-rotate,) var(--tw-invert,) var(--tw-saturate,) var(--tw-sepia,) var(--tw-drop-shadow,);
+  }
   .group-hover\:block {
     &:is(:where(.group):hover *) {
       display: block;
@@ -955,6 +954,15 @@
   @layer base {
     *, ::before, ::after, ::backdrop {
       --tw-space-y-reverse: 0;
+      --tw-blur:  ;
+      --tw-brightness:  ;
+      --tw-contrast:  ;
+      --tw-grayscale:  ;
+      --tw-hue-rotate:  ;
+      --tw-invert:  ;
+      --tw-opacity:  ;
+      --tw-saturate:  ;
+      --tw-sepia:  ;
       --tw-scroll-snap-strictness: proximity;
     }
   }
@@ -989,6 +997,42 @@
   syntax: "<number>";
   inherits: false;
   initial-value: 0;
+}
+@property --tw-blur {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-brightness {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-contrast {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-grayscale {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-hue-rotate {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-invert {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-opacity {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-saturate {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-sepia {
+  syntax: "*";
+  inherits: false;
 }
 @property --tw-scroll-snap-strictness {
   syntax: "*";
