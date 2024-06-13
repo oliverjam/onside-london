@@ -1,0 +1,9 @@
+{
+	"name": "router",
+	"main": "main.ts",
+	"exports": {
+		".": "./main.ts",
+		"./jsx-runtime": "./jsx-runtime.js",
+		"./jsx-dev-runtime": "./jsx-runtime.js"
+	}
+}

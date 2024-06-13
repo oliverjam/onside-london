@@ -3,11 +3,17 @@
 	"module": "index.ts",
 	"type": "module",
 	"scripts": {
+		"build": "bun run build.ts",
 		"css": "tailwindcss --watch -i src/main.css -o src/assets/main.css",
 		"dev": "statik src"
 	},
 	"dependencies": {
 		"@tailwindcss/cli": "^4.0.0-alpha.16",
-		"tailwindcss": "^4.0.0-alpha.16"
+		"tailwindcss": "^4.0.0-alpha.16",
+		"router": "file:./router/"
+	},
+	"devDependencies": {
+		"@types/bun": "^1.1.4",
+		"@types/node": "^20.14.2"
 	}
 }
