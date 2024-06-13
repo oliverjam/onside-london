@@ -3,7 +3,7 @@ import { Root } from "../../ui.tsx";
 export default function About() {
 	return (
 		<Root title="Shop - ONSIDE LONDON" url="/shop/">
-			<main class="space-y-12 px-6 md:px-9 lg:px-12 text-center">
+			<main class="space-y-12 px-6 pb-24 md:px-9 lg:px-12 text-center">
 				<h1 class="text-3xl">Shop</h1>
 				<section class="space-y-6">
 					<h2>Accessories</h2>

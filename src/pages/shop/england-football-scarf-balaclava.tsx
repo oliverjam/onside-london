@@ -6,7 +6,7 @@ export default function Balaclava() {
 			title="England Football Scarf Balaclava - ONSIDE LONDON"
 			url="/shop/england-football-scarf-balaclava"
 		>
-			<main class="mt-12 space-y-12 px-6 md:px-9 lg:px-12">
+			<main class="mt-12  space-y-12 px-6 pb-24 md:px-9 lg:px-12">
 				<div class="grid md:grid-cols-2 gap-12">
 					<div class="max-w-[500px] max-md:flex max-md:overflow-x-auto max-md:snap-x max-lg:snap-mandatory">
 						<img

@@ -574,9 +574,6 @@
   .mt-12 {
     margin-top: var(--spacing-12, 3rem);
   }
-  .mt-48 {
-    margin-top: var(--spacing-48, 12rem);
-  }
   .mx-auto {
     margin-left: auto;
     margin-right: auto;
@@ -722,6 +719,9 @@
   }
   .pb-6 {
     padding-bottom: var(--spacing-6, 1.5rem);
+  }
+  .pb-24 {
+    padding-bottom: var(--spacing-24, 6rem);
   }
   .pl-4 {
     padding-left: var(--spacing-4, 1rem);
