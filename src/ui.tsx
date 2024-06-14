@@ -36,21 +36,8 @@ export function Root({ title, url, children }: JSX.Props<RootProps>) {
 					</nav>
 				</header>
 				{children}
-				<footer class="min-h-[55vh] pt-64 px-6 pb-6 space-y-4 bg-[url('/assets/balaclava-together.jpeg')] bg-cover bg-center">
-					<h2 class="text-2xl">The Latest</h2>
-					<p>Sign up to receive news and updates.</p>
-					<form class="flex gap-2">
-						<input
-							type="email"
-							name="email"
-							placeholder="Email Address"
-							aria-label="Email Address"
-							class="bg-white py-2 px-3 md:py-4 py-2 px-3 md:px-6 placeholder:text-stone-500 text-stone-900"
-						/>
-						<button class="py-2 px-3 md:py-4 py-2 px-3 md:px-6 bg-stone-600 grid place-content-center">
-							Sign Up
-						</button>
-					</form>
+				<footer class="min-h-[55vh] p-6 grid items-end bg-[url('/assets/balaclava-together.jpeg')] bg-cover bg-center scrim-b">
+					<p>© ONSIDE LONDON. All rights reserved.</p>
 				</footer>
 			</body>
 		</html>

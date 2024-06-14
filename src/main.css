@@ -20,4 +20,7 @@
 			animation-range: cover 0% cover 50%;
 		}
 	}
+	.scrim-b {
+		border-image: fill 0 linear-gradient(transparent 50%, black);
+	}
 }
