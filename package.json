@@ -5,7 +5,7 @@
 	"scripts": {
 		"build": "bun run build.ts",
 		"css": "tailwindcss --watch -i src/main.css -o src/assets/main.css",
-		"dev": "statik src"
+		"dev": "statik _site"
 	},
 	"dependencies": {
 		"@tailwindcss/cli": "^4.0.0-alpha.16",
