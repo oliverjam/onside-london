@@ -22,7 +22,7 @@ try {
 			f.path.replace(pages_in, out),
 			f.name.replace(".tsx", ".html")
 		);
-		writers.push(Bun.write(out_path, html));
+		writers.push(Bun.write(out_path, "<!doctype html>" + html));
 	}
 
 	// copy over assets
