@@ -4,7 +4,7 @@
 	"type": "module",
 	"scripts": {
 		"build": "bun run build.ts",
-		"css": "tailwindcss --watch -i src/main.css -o src/assets/main.css",
+		"css": "tailwindcss --watch --minify -i src/main.css -o src/assets/main.css",
 		"dev": "statik _site"
 	},
 	"dependencies": {
@@ -15,5 +15,6 @@
 	"devDependencies": {
 		"@types/bun": "^1.1.4",
 		"@types/node": "^20.14.2"
-	}
+	},
+	"browserslist": "last 3 versions"
 }
