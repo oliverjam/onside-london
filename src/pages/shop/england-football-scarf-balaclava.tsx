@@ -13,16 +13,16 @@ export default function Balaclava() {
 				<div class="grid md:grid-cols-2 gap-12">
 					<div class="max-w-[500px] max-md:flex max-md:overflow-x-auto max-md:snap-x max-lg:snap-mandatory">
 						<img
-							src="https://picsum.photos/500/600"
-							width="500"
-							height="600"
+							src="/assets/balaclava-left.png"
+							width="1080"
+							height="1440"
 							class="snap-center"
 							alt="Left side of the balaclava, showing England flag and text"
 						/>
 						<img
-							src="https://picsum.photos/500/600?1"
-							width="500"
-							height="800"
+							src="/assets/balaclava-right.png"
+							width="1080"
+							height="1440"
 							class="snap-center"
 							alt="Right side of the balaclava, showing more text"
 						/>

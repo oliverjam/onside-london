@@ -13,20 +13,20 @@ export default function Shop() {
 				<section class="space-y-6">
 					<h2>Accessories</h2>
 					<hr />
-					<article class="max-w-max space-y-4">
+					<article class="max-w-md space-y-4">
 						<a class="block" href="/shop/england-football-scarf-balaclava">
 							<figure class="grid grid-cols-1 grid-rows-1 group">
 								<img
-									src="https://picsum.photos/500/600"
-									width="500"
-									height="600"
+									src="/assets/balaclava-left.png"
+									width="1080"
+									height="1440"
 									class="col-span-full row-span-full hidden group-hover:block"
 									alt="Left side of the balaclava, showing England flag and text"
 								/>
 								<img
-									src="https://picsum.photos/500/600?1"
-									width="500"
-									height="800"
+									src="/assets/balaclava-right.png"
+									width="1080"
+									height="1440"
 									class="col-span-full row-span-full block group-hover:hidden"
 									alt="Right side of the balaclava, showing more text"
 								/>
