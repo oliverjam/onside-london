@@ -1,8 +1,13 @@
 import { Root } from "../../ui.tsx";
 
-export default function About() {
+let meta = {
+	title: "Shop - ONSIDE LONDON",
+	description: "Our products",
+};
+
+export default function Shop() {
 	return (
-		<Root title="Shop - ONSIDE LONDON" url="/shop/">
+		<Root meta={meta} url="/shop/">
 			<main class="space-y-12 px-6 pb-24 md:px-9 lg:px-12 text-center">
 				<h1 class="text-3xl">Shop</h1>
 				<section class="space-y-6">

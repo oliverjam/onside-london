@@ -1,8 +1,13 @@
 import { Root } from "../ui.tsx";
 
+let meta = {
+	title: "ONSIDE LONDON",
+	description: "Spring/Summer 2024 lookbook from Onside London",
+};
+
 export default function Index() {
 	return (
-		<Root title="ONSIDE LONDON" url="/">
+		<Root meta={meta} url="/">
 			<main class="px-6 md:px-9 lg:px-12 text-center">
 				<h1 class="block my-36 md:my-48 lg:my-48 uppercase text-[clamp(2rem,2rem+2vw,5rem)] leading-tight">
 					Spring/Summer 2024

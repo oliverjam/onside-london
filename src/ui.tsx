@@ -1,13 +1,31 @@
-type RootProps = { title: string; url: string };
+type RootProps = {
+	url: string;
+	meta: {
+		title: string;
+		description: string;
+		image?: { src: string; width: number; height: number };
+	};
+};
 
-export function Root({ title, url, children }: JSX.Props<RootProps>) {
+export function Root({ meta, url, children }: JSX.Props<RootProps>) {
 	return (
 		<html lang="en" class="text-sm md:text-base">
 			<head>
-				<title>{title}</title>
+				<title>{meta.title}</title>
 				<meta charset="utf-8" />
 				<meta name="viewport" content="width=device-width, initial-scale=1" />
 				<link rel="stylesheet" href="/assets/main.css" />
+				<meta name="robots" content="index, follow" />
+				<meta name="googlebot" content="index, follow" />
+				<meta name="description" content={meta.description} />
+				<meta property="og:description" content={meta.description} />
+				{meta.image && (
+					<>
+						<meta property="og:image" content={meta.image.src} />
+						<meta property="og:width" content={String(meta.image.width)} />
+						<meta property="og:height" content={String(meta.image.height)} />
+					</>
+				)}
 			</head>
 			<body class="bg-black text-white font-display">
 				<header class="flex flex-col items-center gap-2 md:flex-row md:items-center md:justify-between p-6 md:p-12">
