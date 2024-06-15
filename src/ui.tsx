@@ -26,7 +26,7 @@ export function Root({ meta, url, children }: JSX.Props<RootProps>) {
 				<meta property="og:image:height" content="630" />
 			</head>
 			<body class="bg-black text-white font-display">
-				<header class="flex flex-col items-center gap-2 md:flex-row md:items-center md:justify-between p-6 md:p-12">
+				<header class="flex flex-col items-center gap-4 md:flex-row md:items-center md:justify-between p-6 md:p-12">
 					<a href="/">
 						<img
 							src="/assets/logo.png"
