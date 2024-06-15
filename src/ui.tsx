@@ -6,8 +6,6 @@ type RootProps = {
 	};
 };
 
-const URL = "https://onsidelondon.co.uk";
-
 export function Root({ meta, url, children }: JSX.Props<RootProps>) {
 	return (
 		<html lang="en" class="text-sm md:text-base">
@@ -20,7 +18,10 @@ export function Root({ meta, url, children }: JSX.Props<RootProps>) {
 				<meta name="googlebot" content="index, follow" />
 				<meta name="description" content={meta.description} />
 				<meta property="og:description" content={meta.description} />
-				<meta property="og:image" content={URL + "/assets/og-image.jpeg"} />
+				<meta
+					property="og:image"
+					content="https://onsidelondon.co.uk/assets/og-image.jpeg"
+				/>
 				<meta property="og:image:width" content="1200" />
 				<meta property="og:image:height" content="630" />
 			</head>
