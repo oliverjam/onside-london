@@ -11,28 +11,56 @@ export default function Balaclava() {
 		<Root meta={meta} url="/shop/england-football-scarf-balaclava">
 			<main class="mt-12  space-y-12 px-6 pb-24 md:px-9 lg:px-12">
 				<div class="grid md:grid-cols-2 gap-12">
-					<div class="max-w-[500px] max-md:flex max-md:overflow-x-auto max-md:snap-x max-lg:snap-mandatory">
-						<img
-							src="/assets/balaclava-left.png"
-							width="1080"
-							height="1440"
-							class="snap-center"
-							alt="Left side of the balaclava, showing England flag and text"
-						/>
-						<img
-							src="/assets/balaclava-right.png"
-							width="1080"
-							height="1440"
-							class="snap-center"
-							alt="Right side of the balaclava, showing more text"
-						/>
-						<img
-							src="/assets/balaclava-product.jpeg"
-							width="1080"
-							height="1440"
-							class="snap-center"
-							alt="Front view of model wearing the balaclava"
-						/>
+					<div class="max-w-[500px]">
+						<div class="max-md:flex max-md:overflow-x-auto max-md:snap-x max-lg:snap-mandatory scroll-smooth">
+							<img
+								src="/assets/balaclava-left.png"
+								id="image-1"
+								width="1080"
+								height="1440"
+								class="snap-center"
+								alt="Left side of the balaclava, showing England flag and text"
+							/>
+							<img
+								src="/assets/balaclava-right.png"
+								id="image-2"
+								width="1080"
+								height="1440"
+								class="snap-center"
+								alt="Right side of the balaclava, showing more text"
+							/>
+							<img
+								src="/assets/balaclava-product.jpeg"
+								id="image-3"
+								width="1080"
+								height="1440"
+								class="snap-center"
+								alt="Front view of model wearing the balaclava"
+							/>
+						</div>
+						<nav class="md:hidden mt-6 flex justify-center gap-6">
+							<a
+								href="#image-1"
+								data-active="true"
+								class="size-6 bg-white/40 rounded-full data-[active='true']:bg-white"
+							></a>
+							<a
+								href="#image-2"
+								class="size-6 bg-white/40 rounded-full data-[active='true']:bg-white"
+							></a>
+							<a
+								href="#image-3"
+								class="size-6 bg-white/40 rounded-full data-[active='true']:bg-white"
+							></a>
+							<script>
+								{`
+								let as = document.querySelectorAll("[href^='#image']");
+								window.onhashchange = () => as.forEach(a => {
+									a.dataset.active = a.hash === location.hash;
+								})
+							`}
+							</script>
+						</nav>
 					</div>
 					<div>
 						<div class="md:sticky md:top-12 space-y-6 max-w-2xl">

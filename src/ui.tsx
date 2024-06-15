@@ -8,7 +8,7 @@ type RootProps = {
 
 export function Root({ meta, url, children }: JSX.Props<RootProps>) {
 	return (
-		<html lang="en" class="text-sm md:text-base">
+		<html lang="en" class="text-sm md:text-base scroll-smooth">
 			<head>
 				<title>{meta.title}</title>
 				<meta charset="utf-8" />
