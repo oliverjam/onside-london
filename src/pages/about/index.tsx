@@ -3,7 +3,7 @@ import { Root } from "../../ui.tsx";
 let meta = {
 	title: "About - ONSIDE LONDON",
 	description:
-		"Designed by Thomas Brazil and made exclusively made in London, ONSIDE LONDON combines high fashion with streetwear, sportswear with couture.",
+		"Designed by Thomas Brazil and exclusively made in London, ONSIDE LONDON combines high fashion with streetwear, sportswear with couture.",
 };
 
 export default function About() {
@@ -13,8 +13,8 @@ export default function About() {
 				<h1 class="sr-only">About</h1>
 				<div class="max-w-3xl my-48 space-y-6 leading-relaxed text-lg">
 					<p>
-						Designed by Thomas Brazil and made exclusively made in London,
-						ONSIDE LONDON combines high fashion with streetwear, sportswear with
+						Designed by Thomas Brazil and exclusively made in London, ONSIDE
+						LONDON combines high fashion with streetwear, sportswear with
 						couture.
 					</p>
 					<p>
