@@ -57,7 +57,7 @@ export default function Balaclava() {
 							</ul>
 							<a
 								href="https://buy.stripe.com/3cs17957QcGn3cI6oo"
-								class="block w-full text-center py-4 px-6 text-lg bg-stone-200 text-stone-950"
+								class="block w-full text-center py-4 px-6 text-lg bg-stone-200 text-stone-950 hover:bg-stone-300 transition-colors"
 								target="_blank"
 							>
 								Buy now
