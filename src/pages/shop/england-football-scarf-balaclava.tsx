@@ -26,6 +26,13 @@ export default function Balaclava() {
 							class="snap-center"
 							alt="Right side of the balaclava, showing more text"
 						/>
+						<img
+							src="/assets/balaclava-product.jpeg"
+							width="1080"
+							height="1440"
+							class="snap-center"
+							alt="Front view of model wearing the balaclava"
+						/>
 					</div>
 					<div>
 						<div class="md:sticky md:top-12 space-y-6 max-w-2xl">
