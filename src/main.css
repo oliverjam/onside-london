@@ -1,8 +1,6 @@
-@import "tailwindcss";
-
-@theme {
-	--font-family-display: palatino, garamond;
-}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 @layer utilities {
 	@supports (animation-timeline: view()) {

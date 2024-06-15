@@ -3,18 +3,17 @@
 	"module": "index.ts",
 	"type": "module",
 	"scripts": {
-		"build": "bun run build.ts",
-		"css": "tailwindcss --watch --minify -i src/main.css -o src/assets/main.css",
+		"build": "tailwindcss --minify -i src/main.css -o src/assets/main.css && bun run build.ts",
+		"css": "tailwindcss --watch -i src/main.css -o src/assets/main.css",
 		"dev": "statik _site"
 	},
 	"dependencies": {
-		"@tailwindcss/cli": "^4.0.0-alpha.16",
-		"tailwindcss": "^4.0.0-alpha.16",
 		"router": "file:./router/"
 	},
 	"devDependencies": {
 		"@types/bun": "^1.1.4",
-		"@types/node": "^20.14.2"
+		"@types/node": "^20.14.2",
+		"tailwindcss": "^3.4.4"
 	},
 	"browserslist": "last 3 versions"
 }
