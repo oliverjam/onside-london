@@ -28,7 +28,7 @@ try {
 	// wait for everything to finish
 	await Promise.all(writers);
 	// generate CSS
-	await Bun.$`bunx tailwindcss -i src/main.css -o _site/assets/main.css`;
+	await Bun.$`bunx tailwindcss --minify -i src/main.css -o _site/assets/main.css`;
 	console.log("⚡ Site built");
 } catch (e) {
 	console.error(e);
